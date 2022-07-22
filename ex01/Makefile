@@ -1,9 +1,9 @@
-NAME=ex00
+NAME=ex01
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror -std=c++98
 RM=rm -f
 
-FILES=main.cpp ClapTrap.cpp
+FILES=main.cpp ClapTrap.cpp ScavTrap.cpp
 FILES_OBJ=$(FILES:%.cpp=%.o)
 
 all: $(NAME)

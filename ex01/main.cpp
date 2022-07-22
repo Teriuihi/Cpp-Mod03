@@ -1,13 +1,16 @@
-#include "ClapTrap.h"
+#include "ScavTrap.h"
 
 int main() {
 	ClapTrap def = ClapTrap();
-	ClapTrap john = ClapTrap("John");
+	ScavTrap john = ScavTrap("John");
 
 	def.attack("John");
 	john.takeDamage(0);
-	john.beRepaired(1);
-	def.beRepaired(1);
+	john.beRepaired(10);
+	def.attack("John");
+	john.takeDamage(0);
 	john.attack("default");
-	def.takeDamage(0);
+	def.takeDamage(20);
+	john.guardGate();
+	def.beRepaired(10);
 }

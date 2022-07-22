@@ -5,11 +5,11 @@
 #include <string>
 
 class ClapTrap {
-private:
+protected:
+	std::string name;
 	unsigned int hp;
 	unsigned int ep;
 	unsigned int ap;
-	std::string name;
 public:
 	ClapTrap();
 	ClapTrap(const std::string& name);
