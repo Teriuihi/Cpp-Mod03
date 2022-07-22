@@ -16,7 +16,8 @@ FragTrap::FragTrap(const std::string &name) : ClapTrap(name) {
 	std::cout << "FragTrap [" << this->name << "] created with name assignment Constructor" << std::endl;
 }
 
-FragTrap::FragTrap(const ClapTrap &ct) {
+FragTrap::FragTrap(const FragTrap &ft) : ClapTrap(ft) {
+	*this = ft;
 	std::cout << "FragTrap [" << this->name << "] created with copy Constructor" << std::endl;
 }
 

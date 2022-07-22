@@ -15,7 +15,8 @@ ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name) {
 	std::cout << "ScavTrap [" << this->name << "] created with name assignment Constructor" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ClapTrap &ct) : ClapTrap(ct) {
+ScavTrap::ScavTrap(const ScavTrap &st) : ClapTrap(st) {
+	*this = st;
 	std::cout << "ScavTrap [" << this->name << "] created with copy Constructor" << std::endl;
 }
 

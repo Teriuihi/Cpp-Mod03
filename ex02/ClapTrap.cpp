@@ -10,6 +10,7 @@ ClapTrap::ClapTrap(const std::string& name) : hp(10), ep(10), ap(0), name(name) 
 }
 
 ClapTrap::ClapTrap(const ClapTrap &cp) : hp(cp.hp), ep(cp.ep), ap(cp.ap), name(cp.name){
+	*this = cp;
 	std::cout << "ClapTrap [" << this->name << "] created with copy Constructor" << std::endl;
 }
 
