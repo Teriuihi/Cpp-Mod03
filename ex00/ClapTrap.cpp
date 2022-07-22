@@ -27,6 +27,10 @@ ClapTrap::~ClapTrap() {
 }
 
 void ClapTrap::attack(const std::string &target) {
+	if (hp == 0) {
+		std::cout << "ClapTrap [" << name << "] wanted to attack but it's dead." << std::endl;
+		return;
+	}
 	if (ep == 0) {
 		std::cout << "ClapTrap [" << name
 			<< "] tried to attack but has no energy left, attack failed..." << std::endl;
@@ -38,15 +42,24 @@ void ClapTrap::attack(const std::string &target) {
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
+	if (hp == 0) {
+		std::cout << "ClapTrap [" << name
+			<< "] was attacked but was already dead so it took no damage." << std::endl;
+		return;
+	}
 	if (hp < amount)
 		hp = 0;
 	else if (hp != 0)
 		hp -= amount;
 	std::cout << "ClapTrap [" << name << "] took [" << amount << "] damage! hp down to: ["
-		<< hp << "]." << (hp == 0 ? "ClapTrap died..." : "") << std::endl;
+		<< hp << "]." << (hp == 0 ? " ClapTrap died..." : "") << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount) {
+	if (hp == 0) {
+		std::cout << "ClapTrap [" << name << "] wanted to repair itself but it's dead." << std::endl;
+		return;
+	}
 	if (ep == 0) {
 		std::cout << "ClapTrap [" << name
 			<< "] tried to repair itself but has no energy left repair failed..." << std::endl;
