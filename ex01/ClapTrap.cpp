@@ -9,6 +9,19 @@ ClapTrap::ClapTrap(const std::string& name) : hp(10), ep(10), ap(0), name(name) 
 	std::cout << "ClapTrap [" << this->name << "] created with name assignment Constructor" << std::endl;
 }
 
+ClapTrap::ClapTrap(const ClapTrap &cp) : hp(cp.hp), ep(cp.ep), ap(cp.ap), name(cp.name){
+	std::cout << "ClapTrap [" << this->name << "] created with copy Constructor" << std::endl;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &cp) {
+	this->name = cp.name;
+	this->hp = cp.hp;
+	this->ep = cp.ap;
+	this->ap = cp.ap;
+	std::cout << "ClapTrap [" << this->name << "] created with assignment operator" << std::endl;
+	return *this;
+}
+
 ClapTrap::~ClapTrap() {
 	std::cout << "ClapTrap [" << name << "] deconstructed" << std::endl;
 }
