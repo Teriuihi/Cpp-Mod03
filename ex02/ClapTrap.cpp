@@ -1,5 +1,5 @@
 #include <iostream>
-#include "ClapTrap.h"
+#include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap() : hp(10), ep(10), ap(0), name("default") {
 	std::cout << "ClapTrap [" << name << "] created with default Constructor" << std::endl;

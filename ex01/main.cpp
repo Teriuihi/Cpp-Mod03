@@ -1,4 +1,4 @@
-#include "ScavTrap.h"
+#include "ScavTrap.hpp"
 
 int main() {
 	ClapTrap def = ClapTrap();

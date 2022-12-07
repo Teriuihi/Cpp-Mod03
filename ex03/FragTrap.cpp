@@ -1,6 +1,6 @@
 #include <string>
 #include <iostream>
-#include "FragTrap.h"
+#include "FragTrap.hpp"
 
 FragTrap::FragTrap() {
 	this->hp = 100;

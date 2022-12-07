@@ -1,5 +1,5 @@
-#include "ScavTrap.h"
-#include "FragTrap.h"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main() {
 	ClapTrap def = ClapTrap();

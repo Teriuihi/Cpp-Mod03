@@ -1,5 +1,5 @@
 #include <iostream>
-#include "ScavTrap.h"
+#include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap() : ClapTrap() {
 	this->hp = 100;
