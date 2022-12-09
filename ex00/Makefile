@@ -1,5 +1,5 @@
 NAME=ex00
-CC=g++
+CC=c++
 CFLAGS=-Wall -Wextra -Werror -std=c++98
 RM=rm -f
 
