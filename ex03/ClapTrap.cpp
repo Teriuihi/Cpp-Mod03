@@ -1,15 +1,15 @@
 #include <iostream>
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : hp(10), ep(10), ap(0), name("default") {
+ClapTrap::ClapTrap() : name("default"), hp(10), ep(10), ap(0) {
 	std::cout << "ClapTrap [" << name << "] created with default Constructor" << std::endl;
 }
 
-ClapTrap::ClapTrap(const std::string& name) : hp(10), ep(10), ap(0), name(name) {
+ClapTrap::ClapTrap(const std::string& name) : name(name), hp(10), ep(10), ap(0) {
 	std::cout << "ClapTrap [" << this->name << "] created with name assignment Constructor" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap &cp) : hp(cp.hp), ep(cp.ep), ap(cp.ap), name(cp.name){
+ClapTrap::ClapTrap(const ClapTrap &cp) : name(cp.name), hp(cp.hp), ep(cp.ep), ap(cp.ap) {
 	*this = cp;
 	std::cout << "ClapTrap [" << this->name << "] created with copy Constructor" << std::endl;
 }
