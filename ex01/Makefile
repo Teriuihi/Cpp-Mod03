@@ -1,6 +1,6 @@
 NAME=ex01
 CC=c++
-CFLAGS=-Wall -Wextra -Werror -std=c++98
+FLAGS=-Wall -Wextra -Werror -std=c++98
 RM=rm -f
 
 FILES=main.cpp ClapTrap.cpp ScavTrap.cpp
