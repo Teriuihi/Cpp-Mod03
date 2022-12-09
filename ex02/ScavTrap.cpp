@@ -27,3 +27,18 @@ ScavTrap::~ScavTrap() {
 void ScavTrap::guardGate() {
 	std::cout << "ScavTrap [" << name << "] is now in guard gate mode." << std::endl;
 }
+
+void ScavTrap::attack(const std::string &target) {
+	if (hp == 0) {
+		std::cout << "ScavTrap [" << name << "] wanted to attack but it's dead." << std::endl;
+		return;
+	}
+	if (ep == 0) {
+		std::cout << "ScavTrap [" << name
+				  << "] tried to attack but has no energy left, attack failed..." << std::endl;
+		return;
+	}
+	ep--;
+	std::cout << "ScavTrap [" << name << "] attacked [" << target << "] for ["
+			  << ap << "] damage!" << std::endl;
+}

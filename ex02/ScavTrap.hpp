@@ -7,6 +7,7 @@ public:
 	ScavTrap(const std::string &name);
 	ScavTrap();
 	ScavTrap(const ScavTrap &st);
+	void attack(const std::string& target);
 	void guardGate();
 	virtual ~ScavTrap();
 };
